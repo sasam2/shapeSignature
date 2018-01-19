@@ -1,7 +1,7 @@
 # shapeSignature
 Shape signature using centroid function.
 
-#shape comparison
+## shape comparison
 Several techniques to compare shapes are available. Simplest and most popular ones are 1D functions which represent the shape signatures. The function represents the variation of
 one specific characteristic of the shape. This can be:
 - Complex coordinates
@@ -13,7 +13,7 @@ one specific characteristic of the shape. This can be:
 - Chord length function
 More approaches to specify polygons are available, simplifying their comparison depending on the purpose.
 
-#shape signature
+## shape signature
 The implemented signature is centroid distance function. This signature was chosen due of its simplicity and because it also targets concave polygons without needing to specify any special
 cases. It returns an array of distances to the center of a set of equally spaced contour points. This signature function is translation independent and, if the shape is normalized, it can be scale
 independent as well. Comparing polygons with the same shape but different rotations may require to shift one of the distance arrays in order for them to match.
