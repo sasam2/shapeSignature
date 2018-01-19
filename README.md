@@ -17,6 +17,5 @@ More approaches to specify polygons are available, simplifying their comparison 
 The implemented signature is centroid distance function. This signature was chosen due of its simplicity and because it also targets concave polygons without needing to specify any special
 cases. It returns an array of distances to the center of a set of equally spaced contour points. This signature function is translation independent and, if the shape is normalized, it can be scale
 independent as well. Comparing polygons with the same shape but different rotations may require to shift one of the distance arrays in order for them to match.
-In order to simplify calculations and save memory, the function does perform the distance to the centroid calculation for all equally spaced contour points. Instead, it calculates distances to the
-centroid only for each polygon vertex as well as its distance to the previous vertex. 
+In order to simplify calculations and save memory, the function does not perform the distance to the centroid calculation for all equally spaced contour points. Instead, it calculates distances to the centroid only for each polygon vertex as well as its distance to the previous vertex. 
 This way, only the vertices distances to the centroid are computed, ignoring all other contour points that constitute the sides of the polygon.
